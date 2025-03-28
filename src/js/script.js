@@ -1,44 +1,45 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-    // Navegação suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+document.addEventListener("DOMContentLoaded", function () {
+    // Animação de contador nos destaques numéricos
+    const counters = document.querySelectorAll(".destaque-item h3 span");
+    counters.forEach(counter => {
+        let target = parseInt(counter.parentElement.getAttribute("data-counter"));
+        let count = 0;
+        let speed = target / 100;
+
+        function updateCount() {
+            count += speed;
+            if (count < target) {
+                counter.textContent = Math.floor(count);
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.textContent = target;
             }
+        }
+        updateCount();
+    });
+
+    // Modal dos pilares interativos
+    const pilarButtons = document.querySelectorAll(".pilar-modal-btn");
+    pilarButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            alert("Mais informações sobre " + this.previousElementSibling.textContent);
         });
     });
 
-    // Controle do menu ativo
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
+    // Quick View nos produtos em destaque
+    const quickViewButtons = document.querySelectorAll(".quick-view");
+    quickViewButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            let productName = this.parentElement.nextElementSibling.textContent;
+            alert("Visualizando: " + productName);
         });
     });
 
-    // Controle do vídeo
-    const video = document.querySelector('.video-logo');
-    video.play().catch(error => {
-        console.log('Autoplay bloqueado, requer interação do usuário');
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll(".faq-item summary");
+    faqItems.forEach(item => {
+        item.addEventListener("click", function () {
+            this.parentElement.classList.toggle("open");
+        });
     });
 });

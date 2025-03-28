@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogiana Alimentos</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="../img/nova_logo_mogiana_transparente.png" 
+                     alt="Mogiana Alimentos" 
+                     class="logo-img">
+            </a>
+
+            <!-- Navegação Principal -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="quem-somos.html" class="nav-link">Quem Somos</a></li>
+                    <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+                    <li><a href="distribuidores.html" class="nav-link">Distribuidores</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- Botão Distribuidor -->
+            <div class="header-actions">
+                <button class="distribuidor-btn">Seja um Distribuidor</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Seção do Vídeo Hero -->
+    <section class="hero-video" aria-label="Vídeo institucional">
+        <div class="video-container">
+            <video class="video-logo" 
+                   autoplay 
+                   muted 
+                   loop 
+                   playsinline
+                   poster="../img/video-poster.jpg">
+                <source src="../img/video01.mp4" type="video/mp4">
+                <source src="../img/video01.webm" type="video/webm">
+                <source src="../img/video01.ogv" type="video/ogg">
+                <p>Seu navegador não suporta vídeos HTML5. 
+                    <a href="../img/video01.mp4">Baixe o vídeo</a>.
+                </p>
+            </video>
+        </div>
+    </section>
+    <main>
+        <!-- Seção Hero (já existe) -->
+        
+        <!-- Destaques numéricos -->
+        <section class="destaques">
+            <div class="destaque-item">
+                <h3 data-counter="50">+<span>0</span</h3>
+                <p>Anos no mercado</p>
+            </div>
+            <!-- Repetir para outros 3 destaques -->
+        </section>
+    
+        <!-- Produtos em Destaque -->
+        <section class="produtos-destaque">
+            <h2>Nossas Linhas Especiais</h2>
+            <div class="produtos-grid">
+                <article class="produto-card">
+                    <div class="produto-imagem">
+                        <img src="../img/produtos/linha-premium.jpg" alt="Linha Premium">
+                        <button class="quick-view">Visualizar</button>
+                    </div>
+                    <h3>Linha Premium</h3>
+                    <a href="produtos.html#premium" class="saiba-mais">Conheça ➔</a>
+                </article>
+                <!-- Repetir para 3-4 produtos -->
+            </div>
+        </section>
+    
+        <!-- CTA Distribuidores -->
+        <section class="cta-distribuidores">
+            <div class="cta-content">
+                <h2>Seja um Distribuidor Oficial</h2>
+                <p>Tenha acesso a benefícios exclusivos e condições especiais</p>
+                <div class="cta-buttons">
+                    <button class="cta-btn">Cadastre-se Agora</button>
+                    <a href="#vantagens" class="cta-link">Ver Vantagens →</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Pilares Interativos -->
+        <section class="pilares">
+            <div class="pilar-card">
+                <div class="pilar-icone">♻️</div>
+                <h3>Sustentabilidade</h3>
+                <p>Nossos processos eco-friendly</p>
+                <button class="pilar-modal-btn">Saiba Mais</button>
+            </div>
+            <!-- Repetir para Qualidade, Inovação, Tradição -->
+        </section>
+    
+        <!-- Blog Preview -->
+        <section class="blog-preview">
+            <h2>Conteúdo Exclusivo</h2>
+            <div class="blog-carrossel">
+                <article class="post-card">
+                    <img src="../img/blog/tendencia-mercado.jpg" alt="Tendências">
+                    <div class="post-content">
+                        <h3>Tendências do Mercado Alimentício</h3>
+                        <a href="blog.html#post1" class="leia-mais">Leia Artigo →</a>
+                    </div>
+                </article>
+                <!-- 2-3 posts recentes -->
+            </div>
+        </section>
+    
+        <!-- Mapa de Atuação -->
+        <section class="mapa-atuacao">
+            <h2>Onde Estamos Presentes</h2>
+            <div class="mapa-interativo">
+                <!-- Integrar mapa SVG ou API -->
+                <div class="estado" data-estado="SP">São Paulo</div>
+                <!-- Outros estados -->
+            </div>
+        </section>
+    
+        <!-- FAQ -->
+        <section class="faq-home">
+            <h2>Dúvidas Frequentes</h2>
+            <div class="faq-accordion">
+                <details class="faq-item">
+                    <summary>Como me torno um distribuidor?</summary>
+                    <p>Passo a passo completo...</p>
+                </details>
+                <!-- 3-5 perguntas -->
+            </div>
+        </section>
+    </main>
+
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
