@@ -124,3 +124,37 @@ function initMap() {
         infoWindowBiritiba.close(); // Fecha o outro InfoWindow
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.politica-container');
+    const items = document.querySelectorAll('.politica-item');
+
+    // Função para posicionar os itens
+    function positionItems() {
+        const containerRect = container.getBoundingClientRect();
+        const containerWidth = containerRect.width;
+        const containerHeight = containerRect.height;
+
+        // Centro do container
+        const centerX = containerWidth / 2;
+        const centerY = containerHeight / 2;
+
+        // Raio do círculo (proporcional ao container)
+        const radius = Math.min(containerWidth, containerHeight) * 0.35; // 35% do menor lado
+
+        items.forEach((item, index) => {
+            const angle = (index * 72) * (Math.PI / 180); // 72° entre cada item (360° / 5)
+            const x = centerX + radius * Math.cos(angle) - (item.offsetWidth / 2); // Posição X
+            const y = centerY + radius * Math.sin(angle) - (item.offsetHeight / 2); // Posição Y
+
+            item.style.left = `${x}px`;
+            item.style.top = `${y}px`;
+        });
+    }
+
+    // Posiciona os itens inicialmente
+    positionItems();
+
+    // Reposiciona os itens ao redimensionar a janela
+    window.addEventListener('resize', positionItems);
+});
