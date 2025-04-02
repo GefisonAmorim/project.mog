@@ -158,3 +158,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Reposiciona os itens ao redimensionar a janela
     window.addEventListener('resize', positionItems);
 });
+
+
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+        })
+        .catch(error => console.error('Erro ao carregar o cabeçalho:', error));
+ //página de cadastro//
+
+    document.querySelector('.distribuidor-btn').addEventListener('click', function() {
+        window.location.href = 'cadastro.html';
+    });
+    document.querySelector('.distribuidor-btn').addEventListener('click', function() {
+        window.location.href = 'cadastro.html';
+    });
