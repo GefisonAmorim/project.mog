@@ -1,70 +1,161 @@
-.cadastro-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
+
+/* Logo no topo da página */
+.logo-cadastro {
+    display: block; /* Garante que seja um bloco para centralização */
+    text-align: center; /* Centraliza a logo */
+    margin: 20px 0; /* Espaçamento superior e inferior */
 }
 
-.login-section, .cadastro-section {
-    width: 45%;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.logo-cadastro .log-img {
+    max-width: 200px; /* Tamanho máximo da logo, ajuste conforme necessário */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Remove espaços indesejados abaixo da imagem */
+    margin: 0 auto; /* Centraliza horizontalmente */
 }
 
-h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    color: #333;
+/* Logo no rodapé (já existente, mas ajustada) */
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
     text-align: center;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.footer-brand .footer-logo {
+    max-width: 150px; /* Tamanho ajustado para o rodapé */
+    height: auto;
+    margin-bottom: 10px;
+    display: block; /* Remove espaços indesejados */
+    margin-left: auto; /* Centraliza no container */
+    margin-right: auto;
 }
 
+.footer-brand p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsividade para ambas as logos */
+@media (max-width: 768px) {
+    .logo-cadastro .log-img {
+        max-width: 150px; /* Reduz o tamanho em telas menores */
+    }
+
+    .footer-brand .footer-logo {
+        max-width: 120px; /* Reduz o tamanho no rodapé em telas menores */
+    }
+}
+/* Container principal */
+.cadastro-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as seções se empilhem em telas menores */
+    justify-content: center; /* Centraliza as seções horizontalmente */
+    gap: 40px; /* Espaço entre login e cadastro */
+    max-width: 1200px; /* Largura máxima */
+    margin: 40px auto; /* Centraliza na página com margem superior/inferior */
+    padding: 20px;
+}
+
+/* Estilos comuns para as seções */
+.login-section, .cadastro-section {
+    flex: 1; /* Cresce para ocupar espaço disponível */
+    min-width: 300px; /* Largura mínima para evitar que fique muito estreito */
+    background-color: #f9f9f9; /* Fundo leve para destacar */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Títulos */
+.login-section h2, .cadastro-section h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Fonte destacada */
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos dos formulários */
+#login-form, #cadastro-form {
+    display: flex;
+    flex-direction: column; /* Campos em coluna */
+    gap: 15px; /* Espaço entre os elementos */
+}
+
+/* Labels */
 label {
     font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
-    color: #555;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
 }
 
-input {
+/* Inputs */
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+    width: 100%; /* Ocupa toda a largura disponível */
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    font-size: 14px;
     font-family: 'Poppins', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Inclui padding e borda na largura */
 }
 
-button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
+/* Botões */
+button[type="submit"] {
+    background-color: #007bff; /* Azul como exemplo, ajuste à sua paleta */
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Garante que fique centralizado na altura da tela */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Tom mais escuro no hover */
 }
 
-.log-img {
-    max-width: 50%;
-    height: auto;
+/* Responsividade */
+@media (max-width: 768px) {
+    .cadastro-container {
+        flex-direction: column; /* Empilha as seções em telas menores */
+        padding: 10px;
+    }
+
+    .login-section, .cadastro-section {
+        min-width: 100%; /* Ocupa toda a largura em telas pequenas */
+    }
+}
+.footer-social {
+    text-align: center;
+    padding: 20px;
+    /* Sem background-color para remover o fundo branco */
+}
+
+.footer-social h3 {
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif; /* Alinhado com as fontes do seu projeto */
+    color: #333;
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    gap: 20px; /* Espaçamento entre os ícones */
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s; /* Efeito de hover */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }

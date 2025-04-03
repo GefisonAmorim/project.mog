@@ -174,3 +174,88 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.distribuidor-btn').addEventListener('click', function() {
         window.location.href = 'cadastro.html';
     });
+
+
+    //mapa para pesquisa //
+    // Lista de distribuidores (exemplo fictício - substitua pelos reais)
+const distribuidores = [
+    { nome: "Distribuidor São Paulo", lat: -23.5505, lng: -46.6333, endereco: "Rua Exemplo, 123, São Paulo - SP" },
+    { nome: "Distribuidor Campinas", lat: -22.9099, lng: -47.0626, endereco: "Av. Teste, 456, Campinas - SP" },
+    { nome: "Distribuidor Ribeirão Preto", lat: -21.1704, lng: -47.8103, endereco: "Rua Modelo, 789, Ribeirão Preto - SP" }
+];
+
+// Função para inicializar o mapa
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 7,
+        center: { lat: -23.5505, lng: -46.6333 } // Centro inicial: São Paulo
+    });
+
+    // Adicionar marcadores para cada distribuidor
+    distribuidores.forEach(dist => {
+        const marker = new google.maps.Marker({
+            position: { lat: dist.lat, lng: dist.lng },
+            map: map,
+            title: dist.nome
+        });
+
+        // InfoWindow com detalhes
+        const infoWindow = new google.maps.InfoWindow({
+            content: `<h3>${dist.nome}</h3><p>${dist.endereco}</p>`
+        });
+
+        marker.addListener("click", () => {
+            infoWindow.open(map, marker);
+        });
+    });
+
+    // Preencher a lista de distribuidores (opcional)
+    const lista = document.getElementById("distribuidores-list");
+    distribuidores.forEach(dist => {
+        const item = document.createElement("p");
+        item.innerHTML = `<strong>${dist.nome}</strong> - ${dist.endereco}`;
+        lista.appendChild(item);
+    });
+}
+
+// Função de pesquisa
+document.getElementById("search-btn").addEventListener("click", function() {
+    const input = document.getElementById("search-input").value;
+    const geocoder = new google.maps.Geocoder();
+
+    geocoder.geocode({ address: input + ", São Paulo, Brasil" }, function(results, status) {
+        if (status === "OK") {
+            const location = results[0].geometry.location;
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: location
+            });
+
+            // Adicionar marcadores próximos
+            distribuidores.forEach(dist => {
+                const distLatLng = new google.maps.LatLng(dist.lat, dist.lng);
+                const distance = google.maps.geometry.spherical.computeDistanceBetween(location, distLatLng) / 1000; // Distância em km
+
+                if (distance < 50) { // Mostrar distribuidores em um raio de 50km
+                    const marker = new google.maps.Marker({
+                        position: { lat: dist.lat, lng: dist.lng },
+                        map: map,
+                        title: dist.nome
+                    });
+
+                    const infoWindow = new google.maps.InfoWindow({
+                        content: `<h3>${dist.nome}</h3><p>${dist.endereco}</p>`
+                    });
+
+                    marker.addListener("click", () => {
+                        infoWindow.open(map, marker);
+                    });
+                }
+            });
+        } else {
+            alert("Localização não encontrada. Tente novamente!");
+        }
+    });
+});
+
+

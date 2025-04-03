@@ -36,9 +36,11 @@
 
 /* Navegação */
 .main-nav {
-    flex-grow: 1;
-    margin-left: 4rem;
+    flex: 1; /* Permite que o menu ocupe o espaço entre os elementos */
+    display: flex;
+    justify-content: center; /* Centraliza os itens do menu */
 }
+
 
 .nav-list {
     display: flex;
