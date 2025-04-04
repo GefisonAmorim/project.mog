@@ -274,8 +274,10 @@ body {
     background-blend-mode: lighten; /* Mistura os dois */
 }
 
+
+
 .destaque-item {
-    background: #ecebe8;
+    background: #032963;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -292,7 +294,7 @@ h3 {
 }
 p {
     font-size: 18px; /* Base size */
-    color: #333;
+    color: rgb(238, 207, 29);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     font-weight: 400;
