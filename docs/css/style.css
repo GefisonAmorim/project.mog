@@ -265,7 +265,7 @@ body {
     padding: 50px 20px;
     
     /* Adicionando a imagem de fundo */
-    background-image: url('../img/agua.gota.jpg'); /* Caminho correto para a imagem */
+   background-color: #e6f4ea;
     background-size: cover;  /* Faz a imagem cobrir toda a área */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Evita repetição da imagem */
