@@ -301,62 +301,96 @@ p {
     transition: color 0.3s ease;
 }
 
-.linha-premium {
-    background-image: url('../img/img.fundo.png'); /* substitua pelo caminho certo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-  }
-  
-  .linha-premium::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* overlay para contraste */
-    z-index: 0;
-  }
-  
-  .conteudo-premium {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 40px;
-  }
-  
-  .conteudo-premium h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .conteudo-premium p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .galões-premium {
+
+/* Estilos gerais para os banners */
+.banner-premium, .banner-domus {
     display: flex;
-    justify-content: center;
-    gap: 60px;
-    position: relative;
-    z-index: 1;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
   }
   
-  .galões-premium img {
-    max-width: 250px;
-    transition: transform 0.3s ease;
+  /* Conteúdo textual */
+  .conteudo-premium, .conteudo-domus {
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
   }
   
-  .galões-premium img:hover {
-    transform: scale(1.05);
+  .conteudo-premium h2, .conteudo-domus h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    
+  }
+  .subtexto{
+    color: #1a1a1a;
   }
   
+  .conteudo-premium p, .conteudo-domus p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Botão Saiba Mais */
+  .btn-saiba-mais {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #32004a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-saiba-mais:hover {
+    background-color: #8236d8;
+  }
+  
+  /* Imagens */
+  .galoes-10e20l, .domus {
+    flex: 1;
+  }
+   .img-domus {
+    max-width: 800px;
+    height: auto;
+    border-radius:  0 40px 40px 0; ; /* Sem bordas redondas, conforme último ajuste */
+    object-fit: cover;
+  }
+  .img-10e20l{
+    max-width: 800px;
+    border-radius: 40px 0 0 40px ;
 
 
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .banner-premium, .banner-domus {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .conteudo-premium, .conteudo-domus {
+      padding: 0;
+      margin-bottom: 20px;
+      order: 2; /* Texto aparece abaixo da imagem em telas pequenas */
+    }
+  
+    .galoes-10e20l, .domus {
+      order: 1; /* Imagem aparece acima do texto em telas pequenas */
+    }
+  
+    .img-10e20l, .img-domus {
+      max-width: 100%;
+    }
+  }
 .cta-distribuidores {
     background: var(--primary-dark); /* Roxo escuro */
     color: white;
