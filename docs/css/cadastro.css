@@ -118,7 +118,7 @@ body {
 }
 
 .register-link a {
-    color: #a564f0;
+    color: #725bc7;
     text-decoration: none;
 }
 
@@ -126,19 +126,39 @@ body {
     text-decoration: underline;
 }
 .form-info {
-    background-color: #a1ebf5;
-    border-left: 4px solid #a564f0;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    background: linear-gradient(135deg, #f3f0fb, #ffffff);
+    border-left: 5px solid #a564f0;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    font-size: 1rem;
     color: #444;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(165, 100, 240, 0.1);
     text-align: left;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.form-info::before {
+    content: "ℹ️";
+    font-size: 1.3rem;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+
+.form-info p {
+    margin-left: 30px; /* espaço por conta do ícone */
+    margin-bottom: 8px;
+    color: #333;
 }
 
 .form-info strong {
     color: #a564f0;
+    font-weight: 600;
 }
+
 
 
 /* Responsividade */
