@@ -968,6 +968,7 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     gap: 30px;
+    align-items: flex-start; /* Alinha todas as seções no topo */
 }
 
 .footer-brand {
@@ -993,7 +994,7 @@ p {
 }
 
 .footer-links h3, .footer-contact h3, .footer-social h3 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', sans-serif; /* Padronizei a fonte para consistência */
     font-size: 1.5rem;
     color: var(--secondary-color); /* Amarelo */
     margin-bottom: 15px;
@@ -1029,16 +1030,15 @@ p {
 .footer-contact p strong {
     color: var(--secondary-color); /* Amarelo */
 }
+
 .footer-social {
     text-align: center;
-    padding: 20px;
-    /* Removi o background-color: #f8f8f8; */
+    padding: 0; /* Removi o padding para alinhar com as demais seções */
 }
 
 .footer-social h3 {
     margin-bottom: 15px;
-    font-family: Arial, sans-serif;
-    color: #333;
+    color: #ffd700;
 }
 
 .social-icons {
@@ -1060,6 +1060,7 @@ p {
 .social-icons img:hover {
     transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }
+
 .footer-bottom {
     text-align: center;
     padding-top: 20px;

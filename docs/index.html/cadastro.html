@@ -6,58 +6,64 @@
     <title>Cadastro - Água Leve Mogiana</title>
     <link rel="stylesheet" href="../css/style.css"> <!-- Estilos globais -->
     <link rel="stylesheet" href="../css/cadastro.css"> <!-- Estilos específicos -->
-    <link rel="stylesheet" href="estilos.css"> <!-- Novo CSS para o footer -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="#" class="logo.cadastro"> <img src="../img/nova_logo_mogiana_transparente.png" alt="log" class="log-img"></a>
-    <!-- Conteúdo da página -->
-    <main class="cadastro-container">
-        <!-- Seção de Login -->
-        <section class="login-section">
-            <h2>Login</h2>
-            <form id="login-form">
-                <label for="email-login">E-mail:</label>
-                <input type="email" id="email-login" name="email" required>
-                
-                <label for="password-login">Senha:</label>
-                <input type="password" id="password-login" name="password" required>
-                
-                <button type="submit">Entrar</button>
-            </form>
-        </section>
-
-        <!-- Seção de Cadastro -->
-        <section class="cadastro-section">
-            <h2>Criar Cadastro</h2>
-            <form id="cadastro-form">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                
-                <label for="email-cadastro">E-mail:</label>
-                <input type="email" id="email-cadastro" name="email" required>
-                
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
-                
-                <label for="password-cadastro">Senha:</label>
-                <input type="password" id="password-cadastro" name="password" required>
-                
-                <button type="submit">Cadastrar</button>
-            </form>
-        </section>
-    </main>
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro - Água Leve Mogiana</title>
+        <link rel="stylesheet" href="styles.css"> <!-- Ajuste o caminho do CSS -->
+    </head>
+    
+    
+        <!-- LOGO + LOGIN -->
+        <main class="main-wrapper">
+            <div class="logo-cadastro">
+                <img src="../img/nova_logo_mogiana_transparente.png" alt="Logo Água Leve Mogiana" class="log-img">
+            </div>
+    
+            <div class="cadastro-container">
+                <div class="form-container">
+                    <section class="login-section">
+                        <h2>Login</h2>
+                        <form id="login-form">
+                            <div class="form-group">
+                                <label for="email-login">E-mail:</label>
+                                <input type="email" id="email-login" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password-login">Senha:</label>
+                                <input type="password" id="password-login" name="password" required>
+                            </div>
+                            <button type="submit" class="btn">Entrar</button>
+                        </form>
+                        <p class="register-link">Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <div class="form-info">
+            <p class="text-info">Este formulário é exclusivo para distribuidores interessados em revender a <strong>Água Leve Mogiana</strong>.</p>
+            <p>Após o envio, nossa equipe interna irá avaliar as informações e entrará em contato com você.</p>
+        </div>
+        
+    
+   
     <!-- Rodapé -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
-                <a href="#" class="logo-cadastro"> <img src="../img/nova_logo_mogiana_transparente.png" alt="Logo Água Leve Mogiana" class="log-img"></a>
+                <img src="../img/nova_logo_mogiana_transparente.png" alt="Logo Água Leve Mogiana" class="footer-logo">
                 <p>Água pura, vida saudável – desde 1954.</p>
             </div>
             <div class="footer-links">
                 <h3>Links Úteis</h3>
                 <ul>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="quem-somos.html">Sobre nós</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="distribuidores.html">Seja um Distribuidor</a></li>
                     <li><a href="contato.html">Contato</a></li>
@@ -69,23 +75,25 @@
                 <p><strong>E-mail:</strong> contato@agualevemogiana.com.br</p>
                 <p><strong>WhatsApp:</strong> (19) 98765-4321</p>
             </div>
-            <div class="footer-social">
-                <h3>Siga-nos</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/agua_leve_mogiana/" target="_blank" aria-label="Instagram">
-                        <img src="../img/instagram.png" alt="Ícone do Instagram">
-                    </a>
-                    <a href="https://facebook.com/agualevemogiana" target="_blank" aria-label="Facebook">
-                        <img src="../img/facebook.png" alt="Ícone do Facebook">
-                    </a>
-                    <a href="https://linkedin.com/company/agualevemogiana" target="_blank" aria-label="LinkedIn">
-                        <img src="../img/linkedin.png" alt="Ícone do LinkedIn">
-                    </a>
+            
+                <div class="footer-social">
+                    <h3>Siga-nos</h3>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/agua_leve_mogiana/" target="_blank" aria-label="Instagram">
+                            <img src="../img/logoinstagran.png" alt="Ícone do Instagram">
+                        </a>
+                        <a href="https://www.tiktok.com/@seuusuario" target="_blank" aria-label="TikTok">
+                            <img src="../img/logotiktok.png" alt="Ícone do TikTok">
+                        </a>
+                        <a href="https://linkedin.com/company/agualevemogiana" target="_blank" aria-label="LinkedIn">
+                            <img src="../img/logo-linkedin-icon-1536.png" alt="Ícone do LinkedIn">
+                        </a>
+                    </div>
                 </div>
-            </div>
+          
         </div>
         <div class="footer-bottom">
-            <p>© 2025 Água Leve Mogiana. Todos os direitos reservados.</p>
+            <p>&copy; 2025 Água Leve Mogiana. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
