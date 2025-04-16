@@ -371,6 +371,46 @@ body{
         max-width: 100%;
     }
 }
+.mapa-atuacao {
+    text-align: center;
+    padding: 50px 20px;
+    background: white; /* Roxo escuro */
+    color: black;
+}
+
+.mapa-atuacao .titulo_h2 {
+    color: black;
+    margin-bottom: 40px;
+}
+
+.mapa-interativo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#map {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.info-window {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.info-window h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.info-window p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 
 /* Nossas Fontes */
 .quem-somos-fontes {
