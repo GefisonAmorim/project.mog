@@ -119,26 +119,41 @@ body{
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
 }
+/* === BANNER DE PRODUTOS === */
+.produtos-banner {
+    width: 100%;
+    height: 110vh; /* altura controlada */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 5rem; /* evita quebrar com o header */
+  }
+  
+  .produtos-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Efeito de sombra suave no final da imagem */
+  .produtos-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
+  }
+  
 
-.produtos-section {
-    padding: 50px 0;
-    text-align: center;
-    background-color: #f9f9f9;
-}
 
-.titulo {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.subtitulo {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2em;
-    color: #555;
-    margin-bottom: 40px;
-}
 
 .categoria {
     margin: 40px 0;
