@@ -273,11 +273,52 @@ body {
     background-color: rgba(224, 247, 255, 0.6); /* Azul clarinho com 60% de opacidade */
     background-blend-mode: lighten; /* Mistura os dois */
 }
+/* Alinha h3 numérico com o mesmo tamanho dos ícones */
+.destaque-item h3[data-counter] {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+
+
+.destaque-mapa h3 {
+    background-image: url('../img/world.svg'); /* ajuste o caminho conforme sua estrutura de pastas */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    text-indent: -9999px; /* esconde o texto original */
+}
+.destaque-trofeu h3 {
+    background-image: url('../img/podium-award.svg'); /* atualize com o caminho correto */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    text-indent: -9999px; /* esconde o emoji */
+}
+.destaque-microscopio h3 {
+    background-image: url('../img/microscope.svg'); /* ajuste o caminho */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    text-indent: -9999px;
+}
 
 
 .destaque-item {
-    background: #a564f0;
+    background: #f9f9f9;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -293,8 +334,8 @@ h3 {
     
 }
 p {
-    font-size: 18px; /* Base size */
-    color: rgb(238, 207, 29);
+    font-size: 20px; /* Base size */
+    color: rgb(22, 22, 19);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     font-weight: 400;
